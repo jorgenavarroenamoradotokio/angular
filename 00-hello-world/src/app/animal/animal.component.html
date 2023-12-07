@@ -1,0 +1,11 @@
+<p>
+    Nombre: {{nombre}}
+    Raza: {{raza}}
+    Edad: {{getEdad()}}
+</p>
+
+<div (keyup)="0">
+    <label for="repetidor">Repetidor: </label>
+    <input type="text" id="repetidor" #entrada />
+    {{entrada.value}}
+</div>
