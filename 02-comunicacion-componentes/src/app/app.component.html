@@ -1,0 +1,8 @@
+<div class="container">
+    <app-persona (personaCreada)="registrarPersona($event)"/>
+    
+    <hr />
+    
+    <app-detalle-persona *ngFor="let persona of personas; let i = index" [persona]="persona" [indice]="i" />
+</div>
+
