@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Registro de personas</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="title">Titulo de la persona: </label>
+            <input name="title" id="title" type="text" class="form-control" (input) = 'registrarTitulo($event)'/>
+            {{getTitulo()}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="name">Nombre de la persona: </label>
+            <input name="name" id="name" type="text" class="form-control" [(ngModel)]="nombre"/>
+            {{getNombre()}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="button" class="btn btn-primary" value="Registrar" (click) = 'registrarPersona()'/>
+            <p *ngIf="mostrar; else sinPersona">{{getMensaje()}} a {{getNombre()}}</p>
+            <ng-template #sinPersona>
+                <p>{{getMensaje()}}</p>
+            </ng-template>
+        </div>
+    </div>
+</div>
